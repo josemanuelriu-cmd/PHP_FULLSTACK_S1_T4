@@ -15,7 +15,9 @@
                 Triangle i Rectangle que heretin de Shape i que calculin respectivament l'àrea amb un mètode.
         -->
         <?php          
-
+            require('Rectangle.php'); 
+            require('Triangle.php'); 
+            
             abstract class Shape {
                 public string $width;
                 public string $high;
@@ -25,21 +27,7 @@
                     $this->high = $high;
                 }                   
             }
-
-            class Triangle extends Shape {
-                public function ShowArea(){
-                    $Result = $this->width * $this->high / 2;
-                    echo "L'area del triange es: " . $Result . "<br>"; 
-                }
-            }
-
-            class Rectangle extends Shape {
-                public function ShowArea(){
-                    $Result = $this->width * $this->high;
-                    echo "L'area del rectangle es: " . $Result . "<br>"; 
-                }
-            }
-
+            
             $Triangle = new Triangle(10, 8);
             $Triangle->ShowArea();
 
