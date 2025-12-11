@@ -16,7 +16,7 @@
         -->
         <?php          
 
-            class Shape {
+            abstract class Shape {
                 public string $width;
                 public string $high;
                 
