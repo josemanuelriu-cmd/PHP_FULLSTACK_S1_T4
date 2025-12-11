@@ -19,19 +19,19 @@
         <?php          
 
             class PokerDice {
-                const VALUES = ["As","K","Q","J","7","8"];
+                const FACES = ["As","K","Q","J","7","8"];
                 public string $Result;
                 public static int $Counter=0;
 
                 public function Throw(): string {
-                    $this->Result = self::VALUES[array_rand(self::VALUES)] ; 
+                    $this->Result = self::FACES[array_rand(self::FACES)] ; 
                     $this->NewThrow();
                     return "Tirada: " . $this->Result . "<br>";
                 }                
                 public function LastResult(): string {
                     return "Últim resultat: " . $this->Result . "<br>";
                 }
-                public function CountThrow(): string {
+                public function NumberOfThrows(): string {
                     return "El número total de tirades es: ". self::$Counter."<br>";
                 }
                 public function NewThrow(): void {
@@ -46,7 +46,7 @@
             echo $Dau1->Throw();
             echo $Dau1->Throw();
             echo $Dau1->LastResult();
-            echo $Dau1->CountThrow();
+            echo $Dau1->NumberOfThrows();
             
 
             $Dau2 = new PokerDice();
@@ -58,7 +58,7 @@
             $Dau5 = new PokerDice(); 
             echo $Dau5->Throw();
 
-            echo $Dau1->CountThrow();
+            echo $Dau1->NumberOfThrows();
         
         ?>
     </div>
