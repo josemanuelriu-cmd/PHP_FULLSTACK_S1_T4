@@ -27,24 +27,24 @@
             }
 
             class Triangle extends Shape {
-                public function area(){
+                public function ShowArea(){
                     $Result = $this->width * $this->high / 2;
                     echo "L'area del triange es: " . $Result . "<br>"; 
                 }
             }
 
             class Rectangle extends Shape {
-                public function area(){
+                public function ShowArea(){
                     $Result = $this->width * $this->high;
                     echo "L'area del rectangle es: " . $Result . "<br>"; 
                 }
             }
 
             $Triangle = new Triangle(10, 8);
-            $Triangle->area();
+            $Triangle->ShowArea();
 
             $Rectangle = new Rectangle(10, 12);
-            $Rectangle->area();                    
+            $Rectangle->ShowArea();                    
         
         ?>
     </div>
