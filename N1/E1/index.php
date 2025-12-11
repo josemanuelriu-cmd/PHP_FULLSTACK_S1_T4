@@ -16,19 +16,16 @@
         -->
         <?php          
 
-            class Employer {
+            class Employee {
                 public string $name;
                 public string $salary;
                 
-                public function __construct() {
-                }   
-
-                public function NewEmployer(string $Name, int $Salary): void {
+                public function __Construct(string $Name, int $Salary) {
                     $this->name = $Name;
                     $this->salary = $Salary;
                 }
 
-                public function ShowEmployerAndSalary(): void {
+                public function ShowEmployeeMustPayTaxes(): void {
                     echo $this->name . "<br>";
                     if ($this->salary>6000) {
                         echo "Ha de pagar impostos<br>";
@@ -39,13 +36,11 @@
                 }
             }
 
-            $Empleat1 = new Employer;
-            $Empleat1->NewEmployer("Pepe", 2000);
-            $Empleat1->ShowEmployerAndSalary();
+            $Empleat1 = new Employee("Pepe", 2000);
+            $Empleat1->ShowEmployeeMustPayTaxes();
 
-            $Empleat2 = new Employer;
-            $Empleat2->NewEmployer("Juan", 8000);
-            $Empleat2->ShowEmployerAndSalary();            
+            $Empleat2 = new Employee("Juan", 8000);
+            $Empleat2->ShowEmployeeMustPayTaxes();
         
         ?>
     </div>

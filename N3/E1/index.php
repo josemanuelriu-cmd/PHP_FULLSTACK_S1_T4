@@ -20,6 +20,17 @@
             A més, pots aprofitar aquest exercici per treballar una bona presentació amb HTML+CSS que doni suport a la lògica.
         -->
         <?php
+            class Cartellera{
+                public $Cinemas = [];
+
+                public function __construct() {
+                }
+
+                public function AddCine(Cinema $Cinemas): void{
+                    $this->Cinemas[] = $Cinemas;
+                }
+
+            }
 
             class Cinema{
                 public string $Name;
