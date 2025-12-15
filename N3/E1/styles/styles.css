@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    max-width: 1400px;
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+    display: grid;
+    
+}
+header{
+    background-color: white;    
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;    
+    display: grid;
+    grid-template-rows: 100px 200px;
+    gap:116px;
+    margin-bottom: 5px;
+    background-image: url('../Images/header.jpg');
+    background-position: center;
+    height: 400px;
+    align-self: center;
+}
