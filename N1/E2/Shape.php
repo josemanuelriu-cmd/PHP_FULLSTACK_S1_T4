@@ -7,5 +7,6 @@
             $this->width = $width;
             $this->high = $high;
         }
+        abstract public function ShowArea();
     }
 ?>
