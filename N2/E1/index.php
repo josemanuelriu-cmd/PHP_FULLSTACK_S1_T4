@@ -10,11 +10,11 @@
     
     $Dau1 = new PokerDice();
     echo $Dau1->Throw();
-    echo $Dau1->LastResult();
+    echo $Dau1->GetLastResult();
     echo $Dau1->Throw();
     echo $Dau1->Throw();
-    echo $Dau1->LastResult();
-    echo $Dau1->NumberOfThrows();
+    echo $Dau1->GetLastResult();
+    echo $Dau1->GetNumberOfThrows();
     
 
     $Dau2 = new PokerDice();
@@ -26,6 +26,6 @@
     $Dau5 = new PokerDice(); 
     echo $Dau5->Throw();
 
-    echo $Dau1->NumberOfThrows();
+    echo $Dau1->GetNumberOfThrows();
 
 ?>

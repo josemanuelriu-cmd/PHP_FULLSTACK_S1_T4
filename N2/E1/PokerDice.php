@@ -4,19 +4,16 @@
         public string $Result;
         public static int $Counter=0;
 
-        public function Throw(): string {
+        public function Throw(): void {
             $this->Result = self::FACES[array_rand(self::FACES)] ; 
-            $this->NewThrow();
-            return "Tirada: " . $this->Result . "<br>";
+			self::$Counter++;
+            return ;
         }                
-        public function LastResult(): string {
+        public function GetLastResult(): string {
             return "Últim resultat: " . $this->Result . "<br>";
         }
-        public function NumberOfThrows(): string {
+        public function GetNumberOfThrows(): string {
             return "El número total de tirades es: ". self::$Counter."<br>";
-        }
-        public function NewThrow(): void {
-            self::$Counter++;
         }
     }
 ?>
