@@ -7,16 +7,20 @@
             $this->Cinemas[] = $Cinemas;
         }
 
+        public function GetCinemes() {
+            return $this->Cinemas;
+        }
+
         public function SearchForDirector(string $Director): array{
-            echo "<br> Busquem a tota la cartellera si hi ha alguna película del director '$Director': <br>";
+            echo "<br><hr><br><br><p class='text-gray-600'>🔎 Busquem a tota la cartellera si hi ha alguna pel·lícula del director/a '$Director': </p>";
             $Result = [];
             foreach ($this->Cinemas as $Cine) {
                 foreach($Cine->GetFilms() as $Pelicula)
                     if ($Pelicula->GetDirector() == $Director) {
-                        //Falta abans d'afegir-la, veure si no la tenim ja
                         $Result [] = $Pelicula->GetNameFilm();
                     }
             }
+            $Result = array_unique($Result);
             return $Result;
         }
     }

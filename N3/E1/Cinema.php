@@ -21,14 +21,14 @@
         public function ShowFilmsInformation(): void{
             
             if (empty($this->Films)) {
-                echo "<br>No hi han películes actualmentm al cinema $this->Name.<br>";
+                echo "<br>No hi han pel·lícules actualment al cinema $this->Name.<br>";
                 return;
             }
-            echo "<br>En el cinema '$this->Name' hi han les películes: <br><br>";
+            echo "<br>En el cinema '$this->Name' hi han les pel·lícules: <br><br>";
             foreach ($this->Films as $id => $peli) {                        
-                echo $id. "- Película: " . $peli->GetNameFilm();
+                echo (int)$id+1 . "- Pel·lícula: " . $peli->GetNameFilm();
                 echo "  Duració: " . $peli->GetDuration();
-                echo "  Director: " . $peli->GetDirector()."<br><br>";
+                echo "  Director/@: " . $peli->GetDirector()."<br><br>";
             }
         }
         public function ShowLargerFilm(): void{
@@ -44,7 +44,7 @@
                     $MaxDuration=$Duration;
                 }
             }                    
-            echo "La pelicula de major duració es: " . $NameMaxDuration."<br>";
+            echo "La pel·lícula de major duració es: " . $NameMaxDuration."<br>";
         }
         public function AddFilm(Film $Films): void{
             $this->Films[] = $Films;
